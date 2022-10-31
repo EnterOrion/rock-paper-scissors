@@ -1,9 +1,16 @@
 let options = ["rock", "paper", "scissors"];
-let userChoice = prompt("Pick rock, paper, or scissors:");
-userChoice = userChoice.toLowerCase();
 
-if (userChoice != "rock" && userChoice != "paper" && userChoice != "scissors") {
+function getUserChoice() {
+    let userChoice = prompt("Pick rock, paper, or scissors:");
+    userChoice = userChoice.toLowerCase();
+
+    if (userChoice != "rock" && userChoice != "paper" && userChoice != "scissors") {
     alert("Please reload the page and enter a valid choice!");
+    exit;
+    }
+    else {
+        return userChoice
+    }
 }
 
 
@@ -37,6 +44,35 @@ function playRound(userChoice, computerChoice)
 
 }
 
+function game() {
+    let userPoints = 0;
+    let computerPoints = 0;
+    for (let i = 0; i < 5; i++) {
+        let round = playRound(getUserChoice(), getComputerChoice());
+        if (round == "You win, paper beats rock!" || round == "You win, rock beats scissors!" || round ==
+        "You win, scissors beats paper!") {
+            alert (round);
+            userPoints++;
+        }
+        else if (round == "You lose, paper beats rock!" || round == "You lose, rock beats scissors!" ||
+        round == "You lose, scissors beats paper!") {
+            alert (round);
+            computerPoints++;
+        }
+        else {
+            alert (round);
+        }
+     }
 
+    if (userPoints > computerPoints) {
+        alert ("You win!");
+    }
+    else if (computerPoints > userPoints) {
+        alert ("You lose!");
+    }
+    else {
+        alert ("Complete tie!");
+    }
+}
 
-playGame(userChoice, getComputerChoice());
+game()
