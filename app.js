@@ -4,6 +4,7 @@ function getUserChoice() {
     let userChoice = prompt("Pick rock, paper, or scissors:");
     userChoice = userChoice.toLowerCase();
 
+    // ensure user input is a valid choice
     if (userChoice != "rock" && userChoice != "paper" && userChoice != "scissors") {
     alert("Please reload the page and enter a valid choice!");
     exit;
@@ -48,6 +49,7 @@ function game() {
     let userPoints = 0;
     let computerPoints = 0;
     for (let i = 0; i < 5; i++) {
+        // play five rounds, winner announced at end of each round and at the end of game
         let round = playRound(getUserChoice(), getComputerChoice());
         if (round == "You win, paper beats rock!" || round == "You win, rock beats scissors!" || round ==
         "You win, scissors beats paper!") {
