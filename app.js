@@ -11,30 +11,32 @@ function getComputerChoice() {
     return options[Math.floor(Math.random() * options.length)];
 }
 
-function playGame(userChoice, computerChoice)
+function playRound(userChoice, computerChoice)
 {
     if (computerChoice == userChoice) {
-        alert("Tie!");
+        return "Tie!"
     }
     else if (computerChoice == "scissors" && userChoice == "paper") {
-        alert("You lose, scissors beats paper!");
+        return "You lose, scissors beats paper!"
     }
     else if (computerChoice == "rock" && userChoice == "scissors") {
-        alert("You lose, rock beats scissors!");
+        return "You lose, rock beats scissors!"
     }
     else if (computerChoice == "paper" && userChoice == "rock") {
-        alert("You lose, paper beats rock!");
+        return "You lose, paper beats rock!"
     }
     else if (userChoice == "scissors" && computerChoice == "paper") {
-        alert("You win, scissors beats paper!");
+        return "You win, scissors beats paper!"
     }
     else if (userChoice == "rock" && computerChoice == "scissors") {
-        alert("You win, rock beats scissors!");
+        return "You win, rock beats scissors!"
     }
     else if (userChoice == "paper" && computerChoice == "rock") {
-        alert("You win, paper beats rock!");
+        return "You win, paper beats rock!"
     }
 
-
 }
+
+
+
 playGame(userChoice, getComputerChoice());
