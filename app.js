@@ -1,13 +1,9 @@
 let options = ["rock", "paper", "scissors"];
 
-function getUserChoice() {
-    let userChoice = prompt("Pick rock, paper, or scissors:");
-    userChoice = userChoice.toLowerCase();
-
+function getUserChoice(userChoice) {
     // ensure user input is a valid choice
     if (userChoice != "rock" && userChoice != "paper" && userChoice != "scissors") {
-    alert("Please reload the page and enter a valid choice!");
-    exit;
+        return;
     }
     else {
         return userChoice
@@ -77,4 +73,4 @@ function game() {
     }
 }
 
-game()
+//game()
