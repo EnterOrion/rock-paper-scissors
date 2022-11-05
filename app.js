@@ -31,43 +31,55 @@ function getComputerChoice() {
 
 function playRound(userChoice, computerChoice)
 {
-
-    if (document.getElementById("userPoints").innerText == 5) {
-        alert("User wins!")
-        return;
-    }
-
-    if (document.getElementById("computerPoints").innerText == 5) {
-        alert("Computer wins!")
-        return;
-    }
-    
-
     if (computerChoice == userChoice) {
         return "Tie!"
     }
     else if (computerChoice == "scissors" && userChoice == "paper") {
         increasePointComputer()
+        if (document.getElementById("computerPoints").innerText == 5) {
+            alert("Computer wins!")
+            return;
+        }
         return "You lose, scissors beats paper!"
     }
     else if (computerChoice == "rock" && userChoice == "scissors") {
         increasePointComputer()
+        if (document.getElementById("computerPoints").innerText == 5) {
+            alert("Computer wins!")
+            return;
+        }
         return "You lose, rock beats scissors!"
     }
     else if (computerChoice == "paper" && userChoice == "rock") {
         increasePointComputer()
+        if (document.getElementById("computerPoints").innerText == 5) {
+            alert("Computer wins!")
+            return;
+        }
         return "You lose, paper beats rock!"
     }
     else if (userChoice == "scissors" && computerChoice == "paper") {
         increasePointUser()
+        if (document.getElementById("userPoints").innerText == 5) {
+            alert("User wins!")
+            return;
+        }
         return "You win, scissors beats paper!"
     }
     else if (userChoice == "rock" && computerChoice == "scissors") {
         increasePointUser()
+        if (document.getElementById("userPoints").innerText == 5) {
+            alert("User wins!")
+            return;
+        }
         return "You win, rock beats scissors!"
     }
     else if (userChoice == "paper" && computerChoice == "rock") {
         increasePointUser()
+        if (document.getElementById("userPoints").innerText == 5) {
+            alert("User wins!")
+            return;
+        }
         return "You win, paper beats rock!"
     }
 
