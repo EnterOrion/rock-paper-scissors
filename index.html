@@ -9,10 +9,16 @@
 </head>
 <body>
     <h1>Rock, Paper, Scissors!</h1><br>
+    <div class="scoreboard">
+        <p>User Points</p>
+        <p id="userPoints"></p>
+        <p>Computer Points</p>
+        <p id="computerPoints"></p>
+    </div>
     <h3>The first to five wins.</h3>
-    <button onclick="getUserChoice('rock')">Rock</button>
-    <button onclick="getUserChoice('paper')">Paper</button>
-    <button onclick="getUserChoice('scissors')">Scissors</button>
+    <button onclick="playRound('rock', getComputerChoice())">Rock</button>
+    <button onclick="playRound('paper', getComputerChoice())">Paper</button>
+    <button onclick="playRound('scissors', getComputerChoice())">Scissors</button>
     <p>Refresh to play again!</p>
 
 </body>
