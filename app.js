@@ -31,6 +31,18 @@ function getComputerChoice() {
 
 function playRound(userChoice, computerChoice)
 {
+
+    if (document.getElementById("userPoints").innerText == 5) {
+        alert("User wins!")
+        return;
+    }
+
+    if (document.getElementById("computerPoints").innerText == 5) {
+        alert("Computer wins!")
+        return;
+    }
+    
+
     if (computerChoice == userChoice) {
         return "Tie!"
     }
