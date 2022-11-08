@@ -1,6 +1,8 @@
 let options = ["rock", "paper", "scissors"];
 let userData = 0;
 let computerData = 0;
+
+// Sets default of zero for the points per player
 document.getElementById("userPoints").innerText = userData;
 document.getElementById("computerPoints").innerText = computerData;
 
@@ -31,8 +33,9 @@ function getComputerChoice() {
 
 function playRound(userChoice, computerChoice)
 {
+    // Alerts the result of the round, unless one of the players wins
     if (computerChoice == userChoice) {
-        return "Tie!"
+        alert ("Tie!");
     }
     else if (computerChoice == "scissors" && userChoice == "paper") {
         increasePointComputer()
@@ -40,7 +43,7 @@ function playRound(userChoice, computerChoice)
             alert("Computer wins!")
             return;
         }
-        return "You lose, scissors beats paper!"
+        alert ("You lose, scissors beats paper!");
     }
     else if (computerChoice == "rock" && userChoice == "scissors") {
         increasePointComputer()
@@ -48,7 +51,7 @@ function playRound(userChoice, computerChoice)
             alert("Computer wins!")
             return;
         }
-        return "You lose, rock beats scissors!"
+        alert ("You lose, rock beats scissors!");
     }
     else if (computerChoice == "paper" && userChoice == "rock") {
         increasePointComputer()
@@ -56,7 +59,7 @@ function playRound(userChoice, computerChoice)
             alert("Computer wins!")
             return;
         }
-        return "You lose, paper beats rock!"
+        alert ("You lose, paper beats rock!");
     }
     else if (userChoice == "scissors" && computerChoice == "paper") {
         increasePointUser()
@@ -64,7 +67,7 @@ function playRound(userChoice, computerChoice)
             alert("User wins!")
             return;
         }
-        return "You win, scissors beats paper!"
+        alert ("You win, scissors beats paper!");
     }
     else if (userChoice == "rock" && computerChoice == "scissors") {
         increasePointUser()
@@ -72,7 +75,7 @@ function playRound(userChoice, computerChoice)
             alert("User wins!")
             return;
         }
-        return "You win, rock beats scissors!"
+        alert ("You win, rock beats scissors!");
     }
     else if (userChoice == "paper" && computerChoice == "rock") {
         increasePointUser()
@@ -80,7 +83,7 @@ function playRound(userChoice, computerChoice)
             alert("User wins!")
             return;
         }
-        return "You win, paper beats rock!"
+        alert ("You win, paper beats rock!");
     }
 
 }
@@ -117,4 +120,3 @@ function game() {
     }
 }
 
-//game()
