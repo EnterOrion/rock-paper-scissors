@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>The Ultimate Showdown</title>
 </head>
 <body>
@@ -16,9 +17,11 @@
         <p id="computerPoints"></p>
     </div>
     <h3>The first to five wins.</h3>
-    <button onclick="playRound('rock', getComputerChoice())">Rock</button>
-    <button onclick="playRound('paper', getComputerChoice())">Paper</button>
-    <button onclick="playRound('scissors', getComputerChoice())">Scissors</button>
+    <div class="buttons">
+    <button class = "rock" onclick="playRound('rock', getComputerChoice())"></button>
+    <button class = "paper" onclick="playRound('paper', getComputerChoice())"></button>
+    <button class = "scissors" onclick="playRound('scissors', getComputerChoice())"></button>
+    </div>
     <p>Refresh to play again!</p>
 
 </body>

@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    background-color: lightgrey;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.rock {
+    background-image: url("zen-stones.png");
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+
+.paper {
+    background-image: url("clipboard.png");
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+
+.scissors {
+    background-image: url("scissor.png");
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
